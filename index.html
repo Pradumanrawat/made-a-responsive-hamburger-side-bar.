@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+
+        }
+        body{
+            background-color: grey;
+        }
+       .nav {
+        height: 56px;
+        width: 100%;
+        background-color:white;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        gap: 118px;
+        box-shadow: 3px 3px 5px(0,0,0,0.1);
+
+            
+        }
+        .nav h4{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 16px;  
+        }
+        .nav img{
+            height: 48px;
+            width: 79px;
+            cursor: pointer;
+
+        }
+        .sidebar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+        width: 250px;
+        background-color: rgba(255,255,255,0.2);
+        
+        z-index: 999;
+        justify-content: flex-start;
+        flex-direction: column;
+        box-shadow: -10px 0 10px (0,0,0,0.1);
+        align-items: flex-start;
+        backdrop-filter: blur(10px);
+        display: none;
+        }
+        .sidebar h4{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 16px; 
+            width: 100%; 
+        }
+        .sidebar img{
+            height: 48px;
+            width: 79px;
+            cursor: pointer;
+            margin-top: 108px;
+            margin-bottom: 11px;
+
+        }
+        @media(max-width:800px) {
+            .hide{
+                display: none;
+            }
+            .nav img{
+                display: flex;
+                margin-left: 276px;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h4 class="hide">home</h4>
+        <h4 class="hide">services</h4>
+        <h4 class="hide">about us</h4>
+        <h4 class="hide">contact us</h4>
+        <img src="https://cdn-icons-png.freepik.com/256/1828/1828859.png?ga=GA1.1.1359024057.1707026251&semt=ais" id="image">
+
+        </div>
+        <div class="sidebar">
+            <img src="https://cdn-icons-png.freepik.com/256/1828/1828859.png?ga=GA1.1.1359024057.1707026251&semt=ais" id="cross">
+        <h4>home</h4>
+        <h4>services</h4>
+        <h4>about us</h4>
+        <h4>contact us</h4>
+        
+    </div>
+    <script>
+        let icon=document.querySelector("#image")
+        icon.addEventListener("click",function(){
+            var sidebar=document.querySelector(".sidebar")
+            sidebar.style.display="flex"
+        })
+        let cross=document.querySelector("#cross")
+        cross.addEventListener("click",function(){
+            var sidebar=document.querySelector(".sidebar")
+            sidebar.style.display="none"
+            
+        })
+
+    </script>
+</body>
+</html>
